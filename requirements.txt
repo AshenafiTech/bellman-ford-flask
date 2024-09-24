@@ -38,7 +38,6 @@ pyparsing==2.4.7
 pytest==8.3.2
 pytest-base-url==2.1.0
 pytest-playwright==0.5.1
-python-apt==2.4.0+ubuntu3
 python-slugify==8.0.4
 PyYAML==5.4.1
 requests==2.32.3
