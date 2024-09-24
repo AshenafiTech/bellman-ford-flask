@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Least Expensive Route Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Find the Least Expensive Route for the Robot</h1>
+        <form method="POST">
+            <label for="stations">Number of Stations (N):</label>
+            <input type="number" id="stations" name="stations" required>
+            
+            <label for="paths">Paths (e.g., [[0,1,100], [1,2,100], [0,2,500]]):</label>
+            <input type="text" id="paths" name="paths" required>
+            
+            <label for="start_station">Start Station:</label>
+            <input type="number" id="start_station" name="start_station" required>
+            
+            <label for="end_station">End Station:</label>
+            <input type="number" id="end_station" name="end_station" required>
+            
+            <label for="max_stops">Maximum Stops:</label>
+            <input type="number" id="max_stops" name="max_stops" required>
+            
+            <button type="submit">Find Route</button>
+        </form>
+        
+        {% if result %}
+            <div class="result">
+                <h2>Result:</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
